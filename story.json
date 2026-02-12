@@ -80,7 +80,7 @@
         }
       ]
     },
-
+    
     "speakOut": {
       "text": "New scene:\n\nA team meeting is drifting toward a ‘safe’ decision.\nIt won’t actually solve the client problem.\n\nYou speak up:\n“I think we’re missing a simpler option. Can I propose another path?”\n\nHow do you follow through?",
       "choices": [
