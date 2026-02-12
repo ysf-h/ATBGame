@@ -1,0 +1,220 @@
+{
+  "start": "coldOpen",
+  "nodes": {
+    "coldOpen": {
+      "text": "You are Yousaff.\n\nEdmonton. Law school. Too many tabs open.\n\nOne tab: “ATB 101 — Tell us your story, your way.”\nAnother tab: a message from a community group:\n“Can you help us explain a legal issue in plain language… tonight?”\n\nYour brain does the thing it always does:\nHow do I make something useful, and ship it on time?\n\nWhat do you do first?",
+      "choices": [
+        {
+          "label": "Help the community request first, then build the application around what I did",
+          "to": "impactMoment",
+          "delta": { "impact": 2, "thrive": 1, "ready": 1 }
+        },
+        {
+          "label": "Start the application first (I’ll help after)",
+          "to": "pressureMoment",
+          "delta": { "ready": 1 }
+        }
+      ]
+    },
+
+    "impactMoment": {
+      "text": "You jump in.\n\nThis is familiar: public-facing legal education.\nYou’ve done sessions for diverse groups and learned fast that clarity is a form of respect.\n\nThe group asks: “Can we get a one-page explanation someone can actually understand?”\n\nHow do you respond?",
+      "choices": [
+        {
+          "label": "Write a one-pager in plain language + a short script they can read out loud",
+          "to": "impactDelivered",
+          "delta": { "impact": 2, "thrive": 1, "ready": 1 }
+        },
+        {
+          "label": "Write a classic legal memo (thorough, careful, a bit dense)",
+          "to": "denseMemo",
+          "delta": { "ready": 1 }
+        }
+      ]
+    },
+
+    "impactDelivered": {
+      "text": "They reply: “This is exactly what we needed.”\n\nNow the second mission:\nATB asked for “Your Story, Your Way.”\nNot a standard cover letter.\nSomething vivid.\n\nYou choose a format that matches who you are: building things.\nWhat do you build?",
+      "choices": [
+        {
+          "label": "A choose-your-own-adventure game that lets your choices prove your values",
+          "to": "gameDevRoute",
+          "delta": { "ready": 2 }
+        },
+        {
+          "label": "A safe video intro (clean, standard, low-risk)",
+          "to": "safeRoute",
+          "delta": { "ready": 1 }
+        }
+      ]
+    },
+
+    "gameDevRoute": {
+      "text": "You build the CYOA.\n\nThis also feels familiar: you’ve shipped games, built online platforms, and learned that ‘fun’ only counts if the experience is clear.\n\nNew problem:\nThe game is about you. But trust is built with other people.\n\nWho do you involve?",
+      "choices": [
+        {
+          "label": "Ask people to playtest and tell you what’s confusing (then actually iterate)",
+          "to": "playtest",
+          "delta": { "thrive": 2, "ready": 1 }
+        },
+        {
+          "label": "Keep it solo so it’s purely ‘my’ work",
+          "to": "solo",
+          "delta": { "ready": 1 }
+        }
+      ]
+    },
+
+    "playtest": {
+      "text": "Your playtester says:\n\n“Fun. But I still don’t know what you’re like on a team.\nATB wants someone who can stand up, speak out, and still bring people with them.”\n\nYou can get defensive… or you can improve the product.\n\nWhat do you do?",
+      "choices": [
+        {
+          "label": "Add a scene where you respectfully challenge a plan and offer a better one",
+          "to": "speakOut",
+          "delta": { "impact": 1, "thrive": 1, "ready": 1 }
+        },
+        {
+          "label": "Ignore it — the game is already good",
+          "to": "ignoreFeedbackEnding",
+          "delta": { "ready": 1 }
+        }
+      ]
+    },
+
+    "speakOut": {
+      "text": "New scene:\n\nA team meeting is drifting toward a ‘safe’ decision.\nIt won’t actually solve the client problem.\n\nYou speak up:\n“I think we’re missing a simpler option. Can I propose another path?”\n\nHow do you follow through?",
+      "choices": [
+        {
+          "label": "Offer a concrete alternative, tradeoffs, and a fast next step the team can agree on",
+          "to": "getThingsDone",
+          "delta": { "impact": 2, "ready": 2 }
+        },
+        {
+          "label": "Point out the problem and stop there",
+          "to": "almostEnding",
+          "delta": { "ready": 1 }
+        }
+      ]
+    },
+
+    "getThingsDone": {
+      "text": "That’s the pattern in your life:\n\n- advocacy when it matters\n- systems when they help\n- clarity when people need it\n\nYou remember the City role: defending positions in a tribunal setting, and improving outcomes by building better processes.\n\nFinal build decision: how do you make the game feel ‘ATB-ready’?",
+      "choices": [
+        {
+          "label": "Add a scoreboard (Impact / Thrive / Ready) so the mechanics reflect the values",
+          "to": "shipEnding",
+          "delta": { "ready": 2 }
+        },
+        {
+          "label": "Keep it minimal (choices + endings only)",
+          "to": "cleanEnding",
+          "delta": { "ready": 1 }
+        }
+      ]
+    },
+
+    "shipEnding": {
+      "text": "You ship it on GitHub Pages.\n\nA recruiter plays for 90 seconds.\nThey don’t just read claims.\nThey see evidence:\n\nImpact in action.\nThrive together.\nReady for tomorrow.\n\nENDING: Your Story, Your Way — shipped.",
+      "ending": true
+    },
+
+    "cleanEnding": {
+      "text": "You ship a clean version.\nIt’s readable and professional.\n\nBut the scoreboard layer would’ve made the values feel built-in, not stated.\n\nENDING: Clean win.",
+      "ending": true
+    },
+
+    "pressureMoment": {
+      "text": "You start the application first.\nIt looks polished.\nBut something feels off.\n\nYou know you’re at your best when you’re doing real work that helps someone.\n\nWhat do you do?",
+      "choices": [
+        {
+          "label": "Switch: help the community request now, then tell the story honestly",
+          "to": "impactMoment",
+          "delta": { "impact": 1, "thrive": 1 }
+        },
+        {
+          "label": "Push through and submit something generic",
+          "to": "genericEnding",
+          "delta": { "ready": 1 }
+        }
+      ]
+    },
+
+    "genericEnding": {
+      "text": "You submit something fine.\n\nBut it doesn’t feel like you.\n\nENDING: Polished, but not memorable.",
+      "ending": true
+    },
+
+    "denseMemo": {
+      "text": "The memo is thorough.\nBut the group replies:\n\n“We can’t use this directly. It’s too dense for the person we’re trying to help.”\n\nYou get a second chance.\nWhat do you do?",
+      "choices": [
+        {
+          "label": "Translate it into plain language and own the miss",
+          "to": "impactDelivered",
+          "delta": { "impact": 1, "thrive": 1 }
+        },
+        {
+          "label": "Defend the memo: “This is how legal work is.”",
+          "to": "stuckEnding",
+          "delta": { "ready": 1 }
+        }
+      ]
+    },
+
+    "stuckEnding": {
+      "text": "You’re not wrong about complexity.\nBut you missed the point: serving people.\n\nENDING: Technically correct, practically ineffective.",
+      "ending": true
+    },
+
+    "safeRoute": {
+      "text": "You make a video intro.\nIt’s professional.\n\nBut you know you’ve built more interesting things than this.\nAnd ATB literally asked for something non-traditional.\n\nDo you pivot?",
+      "choices": [
+        {
+          "label": "Pivot to the CYOA and keep the video as an optional extra",
+          "to": "gameDevRoute",
+          "delta": { "ready": 2 }
+        },
+        {
+          "label": "Ship the video as-is",
+          "to": "safeEnding",
+          "delta": { "ready": 1 }
+        }
+      ]
+    },
+
+    "safeEnding": {
+      "text": "It’s solid.\nBut it doesn’t scream ‘innovative, digital, entrepreneurial.’\n\nENDING: Safe, but not distinctive.",
+      "ending": true
+    },
+
+    "solo": {
+      "text": "You keep it solo.\nYou love it.\n\nA friend plays and says:\n“I got lost. I’m not sure what you want me to learn about you.”\n\nWhat now?",
+      "choices": [
+        {
+          "label": "Bring in playtesters and iterate (collaboration is part of the product)",
+          "to": "playtest",
+          "delta": { "thrive": 2 }
+        },
+        {
+          "label": "Leave it as a ‘smart person will get it’ thing",
+          "to": "confusingEnding",
+          "delta": { "ready": 1 }
+        }
+      ]
+    },
+
+    "ignoreFeedbackEnding": {
+      "text": "It’s fun.\nBut you missed a chance to show growth and collaboration.\n\nENDING: Fun, slightly closed-off.",
+      "ending": true
+    },
+
+    "almostEnding": {
+      "text": "You raised the issue.\nEveryone nods.\nThen they keep the same plan.\n\nLesson: speaking up is great. Speaking up with a path forward is better.\n\nENDING: Almost.",
+      "ending": true
+    },
+
+    "confusingEnding": {
+      "text": "Clever, but unclear.\n\nENDING: The player quits before the good part.",
+      "ending": true
+    }
+  }
+}
