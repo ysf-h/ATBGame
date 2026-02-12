@@ -15,7 +15,7 @@
           "delta": { "team": 1, "sanity": -1, "clock": "Feb 11, 9:30 PM" }
         },
         {
-          "label": "Start the ATB submission itself (dangerous but exciting)",
+          "label": "Start the ATB submission itself (dangerous, timewise but exciting)",
           "to": "atbTab",
           "delta": { "ship": 1, "sanity": -1, "clock": "Feb 11, 9:30 PM" }
         }
